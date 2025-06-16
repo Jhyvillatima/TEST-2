@@ -1,0 +1,301 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #e92933;
+        --secondary-text-color: #c89295;
+        --background-color: #221112;
+        --container-background: #472426;
+        --border-color: #663336;
+      }
+      .timeline-dot::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -0.75rem;transform: translateX(-50%);
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 9999px;
+        background-color: var(--primary-color);
+        border: 2px solid var(--background-color);
+      }
+      .timeline-line {
+        width: 2px;
+        background-color: var(--border-color);
+      }
+      .timeline-item:first-child .timeline-line-top {
+        visibility: hidden;
+      }
+      .timeline-item:last-child .timeline-line-bottom {
+        visibility: hidden;
+      }
+    </style>
+<title>TasteTreks - Chef Profile</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-[var(--background-color)] text-white" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[var(--border-color)] px-10 py-4 shadow-lg">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-3 text-white">
+<div class="size-7 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em]">TasteTreks</h1>
+</div>
+<nav class="flex items-center gap-8">
+<a class="text-white hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="FVHomepage.html">Home</a>
+<a class="text-white hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="FVworldmap.html">Explore</a>
+<a class="text-[var(--primary-color)] text-sm font-bold leading-normal" href="#">Chefs</a>
+<a class="text-white hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="FVrecipelibrary.html">Recipes</a>
+<a class="text-white hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Travel</a>
+<a class="text-white hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Culture</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="flex flex-col min-w-48 !h-11 max-w-72">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden">
+<div class="text-[var(--secondary-text-color)] flex border-none bg-[var(--container-background)] items-center justify-center pl-4" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-white focus:outline-0 focus:ring-0 border-none bg-[var(--container-background)] h-full placeholder:text-[var(--secondary-text-color)] px-3 text-sm font-normal leading-normal" placeholder="Search Chefs, Recipes..." value=""/>
+</div>
+</label>
+<button aria-label="Bookmarks" class="flex items-center justify-center rounded-lg h-11 w-11 bg-[var(--container-background)] hover:bg-[var(--border-color)] text-white transition-colors">
+<div class="text-white" data-icon="BookmarkSimple" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32ZM184,208.57l-51.77-32.35a8,8,0,0,0-8.48,0L72,208.57V48H184Z"></path>
+</svg>
+</div>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-11 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnM306F58JkNLfw4gm8tziLJCfk9jo20H6dF3F2QW6B441lVDw-HHV7_qLHgZMc5djRUyQrWn5t5Bw4ff2GmC0uXJHpWdeh7ez4GPbl518d79SBV1ocNCg5ujIyH0mQTywiSNoUqq-RwrCjiAMATvhpUhYkZ-cEff0y9_1JasaSRLjQiKtQuZE1CoCPfXJ7jYKmxFS0CApJj1ObvRQpOpzyKyCJ2qsK6kWhsfFuTZSoh-BTKsuxeqkmSXiPcZLQ03J2qUlC5Ha3szt");'></div>
+</div>
+</header>
+<main class="px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-screen-lg flex-1">
+<section class="flex flex-col md:flex-row items-center md:items-start gap-8 p-6 bg-[var(--container-background)] rounded-xl shadow-xl mb-10">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-36 w-36 md:min-h-48 md:w-48 border-4 border-[var(--primary-color)] shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0P_E14IXcAh8XkrBeMNf7uRpfvGt7NA22jin2lGAJjsHgeZ_pDIOVRr_cRjfhwugnGpQNSJt0MYjNZ34qAYteAhS-l3INszm7DcdHDzPMwBoTjCwbKtb0He76EYJKzVPT_e7AGSePwUeg4MUuWeHp_hqLXfGtBCvk7j35o6eDysc7CdS8NMQ71wB5YBIjR_sbupI9sNVZiAV3l4m2PpYTA52wZgsIlS1iKsx4wrk5b-j9Akr7N12pj60hSwiC3oZ15M1f-cQ2F6Wj");'></div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left gap-3">
+<h2 class="text-white text-3xl font-bold leading-tight tracking-[-0.015em]">Chef Isabella Rossi</h2>
+<p class="text-[var(--secondary-text-color)] text-lg font-medium leading-normal">Rome, Italy</p>
+<p class="text-white text-base font-normal leading-relaxed max-w-md">Award-winning chef specializing in traditional Italian cuisine, bringing authentic flavors and innovative techniques to the global stage.</p>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-6 bg-[var(--primary-color)] hover:bg-[#c81e26] text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors mt-2 shadow-md">
+<span class="truncate">Follow Chef</span>
+</button>
+</div>
+</section>
+<div class="pb-3 sticky top-0 bg-[var(--background-color)] z-10 mb-6">
+<div class="flex border-b border-[var(--border-color)] px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-[var(--primary-color)] text-white pb-[13px] pt-4" href="#">
+<p class="text-white text-base font-semibold leading-normal tracking-[0.015em]">Timeline</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[var(--secondary-text-color)] hover:text-white hover:border-b-[var(--primary-color)] transition-all pb-[13px] pt-4" href="#">
+<p class="text-base font-semibold leading-normal tracking-[0.015em]">Dishes</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[var(--secondary-text-color)] hover:text-white hover:border-b-[var(--primary-color)] transition-all pb-[13px] pt-4" href="#">
+<p class="text-base font-semibold leading-normal tracking-[0.015em]">Cook With Me Live</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[var(--secondary-text-color)] hover:text-white hover:border-b-[var(--primary-color)] transition-all pb-[13px] pt-4" href="#">
+<p class="text-base font-semibold leading-normal tracking-[0.015em]">About</p>
+</a>
+</div>
+</div>
+<section class="px-4 mb-12">
+<h3 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em] mb-6">Career Milestones</h3>
+<div class="relative pl-10">
+<div class="absolute left-[1.125rem] top-0 bottom-0 w-0.5 bg-[var(--border-color)]"></div>
+<div class="space-y-10">
+<div class="timeline-item relative flex items-start gap-6">
+<div class="absolute left-[-1.8rem] top-1.5 flex items-center justify-center size-10 bg-[var(--background-color)] rounded-full border-2 border-[var(--primary-color)]">
+<div class="size-6 bg-center bg-no-repeat aspect-square bg-cover rounded-full" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAz6TWQj8ruSL82vXw0D3cnHc6B-kNmj_iWZS_coFlbn-2qNioKr7y2nN85quACGyfpv0kKE3lNykI5N3YLYD6x9T51VnEQHY59_7x1Tala7U4blw5g27vWFJPpVZK6yZobuWCXiW6F3eIJR6InX4_wefkFTRPCY7derxXe0zHy6ovKV-NDYwtzqeBYdFLV0e88LxTVDmmsg5P3YQ9qcYeHsxqpo8UU8flo-TYGfU4Cx6mSmBrLzq0U4hY9dLEnGE-P53c91RLcGkve");'></div>
+</div>
+<div class="bg-[var(--container-background)] p-5 rounded-lg shadow-lg flex-1">
+<p class="text-white text-lg font-semibold leading-normal">Opened 'La Cucina di Isabella' in Rome</p>
+<p class="text-[var(--secondary-text-color)] text-sm font-medium leading-normal">2018</p>
+<p class="text-white/80 text-base mt-2">Launched her flagship restaurant, quickly gaining acclaim for its authentic Roman cuisine and innovative culinary approach.</p>
+</div>
+</div>
+<div class="timeline-item relative flex items-start gap-6">
+<div class="absolute left-[-1.8rem] top-1.5 flex items-center justify-center size-10 bg-[var(--background-color)] rounded-full border-2 border-[var(--primary-color)]">
+<div class="size-6 bg-center bg-no-repeat aspect-square bg-cover rounded-full" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUhhkQL5eJuVvxdaiRlEq89lxal-5xGyI2HGA-n0R9zcNoM0CGI7_Ob_b_KnrO_ilYN4qxukf9remOTJjL74u12C5jHXnVjgey7DNLyYZ4jLio8ePPVzs1j-61BbWY_rwn2SVqe6XW2tnRab35q2nKFqDSsJ_MAPRH82HvU3haBdmA0bbxQ5vUg7dZwHRC5k3Hx0zML0HW1RoXdQwCnCKzCNQOID5e46BUJfB5UnXZHCKnl_Vw-TJC_T97Y45RMho0ihXhs_KqqnYm");'></div>
+</div>
+<div class="bg-[var(--container-background)] p-5 rounded-lg shadow-lg flex-1">
+<p class="text-white text-lg font-semibold leading-normal">Published 'A Taste of Italy' cookbook</p>
+<p class="text-[var(--secondary-text-color)] text-sm font-medium leading-normal">2020</p>
+<p class="text-white/80 text-base mt-2">Shared her passion and family recipes in a bestselling cookbook that inspired home cooks worldwide.</p>
+</div>
+</div>
+<div class="timeline-item relative flex items-start gap-6">
+<div class="absolute left-[-1.8rem] top-1.5 flex items-center justify-center size-10 bg-[var(--background-color)] rounded-full border-2 border-[var(--primary-color)]">
+<div class="size-6 bg-center bg-no-repeat aspect-square bg-cover rounded-full" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNH7YH1gvfvfF3hbmM_xlVXVBWJYiu-U3ZWnfnALkzJ_EgRz4V7B9x_VubRi41EqZeprSPvWBh6BsM58ecjZoJlXL-bwrwMR1rDgBty9nbV3klPJPFz1CvwKEm4EfSZiqeXa9D2lbHrcl6r_rMuPc1L8OOgoqUt98khJX70qU2aE1108pR3L4iwY0F3RkE0PM8ui3Rw4_sI3qJJyQODJSDFqFibqRiazrzi5jRjelt5QIFVVeeiT0pjwXDdPF5TeZnHd8JLCshklPr");'></div>
+</div>
+<div class="bg-[var(--container-background)] p-5 rounded-lg shadow-lg flex-1">
+<p class="text-white text-lg font-semibold leading-normal">Featured in 'Culinary Journeys' TV show</p>
+<p class="text-[var(--secondary-text-color)] text-sm font-medium leading-normal">2021</p>
+<p class="text-white/80 text-base mt-2">Gained international recognition through a popular TV series showcasing her culinary philosophy and travels.</p>
+</div>
+</div>
+<div class="timeline-item relative flex items-start gap-6">
+<div class="absolute left-[-1.8rem] top-1.5 flex items-center justify-center size-10 bg-[var(--background-color)] rounded-full border-2 border-[var(--primary-color)]">
+<div class="size-6 bg-center bg-no-repeat aspect-square bg-cover rounded-full" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGiUgw8HUxFCZMv49s3Se_13ESgYuFwwxC5_7swnu-CmlcbeCD0JsiChRla9yvMG0Yr2BQl0M1jxUe_E8kVwIsvvh5lXB5LxhRh0H-_cdp_7Lq1FBshx7w3ZxFjmAQOoCI9iHxluUdb-h29lUyiGeX0E6A4XJKQqWMPsKEfwKI8B2OHrfpP2CGHQMTPYjweVI2J6fE0ewLOYSPzB0cXahxJqo_yMRM5tjAdwM9zzasMZrl8ItnsCP85WUtwHpCDISfv7AUW4TUokMW");'></div>
+</div>
+<div class="bg-[var(--container-background)] p-5 rounded-lg shadow-lg flex-1">
+<p class="text-white text-lg font-semibold leading-normal">Won 'Best Italian Chef' award</p>
+<p class="text-[var(--secondary-text-color)] text-sm font-medium leading-normal">2022</p>
+<p class="text-white/80 text-base mt-2">Honored with a prestigious award recognizing her contributions to Italian gastronomy and culinary excellence.</p>
+</div>
+</div>
+<div class="timeline-item relative flex items-start gap-6">
+<div class="absolute left-[-1.8rem] top-1.5 flex items-center justify-center size-10 bg-[var(--background-color)] rounded-full border-2 border-[var(--primary-color)]">
+<div class="size-6 bg-center bg-no-repeat aspect-square bg-cover rounded-full" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5ycbJD5UAWurbdQCblTpMZAstCN_IeyQUnUoBK-Vj6XTKs43-W0oCU0mqmN7v5HT3VmJ4WJfQwgIwjZptFhk1iQnCIFDXCb_Y7Pz0dJs_fIGF0eksabhMx9utQPT1DBWc0wr4b8LP3EIy_jU59sZHZ-4k5Nip7dHdfxGyGNBkjsem7OWkeXUApJAV8GLxWTWBQeP8obcBH_tiPZbxf6Osuo3i-4dB6YrAvV3d4XHtUrbc6VS1uYVZG62V7rnQu1skXSwt1LsMKPLZ");'></div>
+</div>
+<div class="bg-[var(--container-background)] p-5 rounded-lg shadow-lg flex-1">
+<p class="text-white text-lg font-semibold leading-normal">Started TasteTreks blog</p>
+<p class="text-[var(--secondary-text-color)] text-sm font-medium leading-normal">2023</p>
+<p class="text-white/80 text-base mt-2">Embarked on a new digital venture to share her culinary adventures, recipes, and food stories with a global audience.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-12">
+<h3 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured Dishes</h3>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden py-4">
+<div class="flex items-stretch px-4 gap-6">
+<div class="flex flex-col gap-3 rounded-xl min-w-64 bg-[var(--container-background)] p-4 shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhVniaTBArC4yamOiW9lIjqnc7oRZKNel9QUWw9AitVRSHjC7MVfa1SQEX7aba9sYeIl30IKR0fcAX5MqfLiHHS6gKQ9WQ_-oa8W74LuQ19qET6MQ5ogmXD_r-aqpZpMfp0Wraj0zttJWAp6w4kMMVJpclk3Gpt8ffPucg5LiQX1AulsBXhDA8t4MtLRLuYayAWJ2BMPA--u071wAXCAFP1QH2fAsruui2NuREaLkpWXAyk3KXryfwswS-3eaU2Kn2dVjtCkgwNV7-");'></div>
+<div>
+<p class="text-white text-lg font-semibold leading-normal">Pasta Carbonara</p>
+<p class="text-[var(--secondary-text-color)] text-sm font-normal leading-normal mt-1">A Roman classic with eggs, cheese, pancetta, and pepper.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl min-w-64 bg-[var(--container-background)] p-4 shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAvDA8PrKvdRf1iuM3-zWhpeP7ljOcSNVKaMglIZz7fh7ShhhtwRXYwVqq_t-xAeGJkzfz7-5-HZyR2nupnQjpMK9LqAAZvW4OIFHsLoCVojo-HQ2n-V0wZCGuhxECLjwwze9hgYddmSzEsKi_8g0MvRi3HSUMhRb50IntDAg-Y7xQnr940Ecz6EInA_Rrxgby0xnpvOOsi91nhyGvXcZNgSUnhS0KA9HQVy9sdUIgPkzTJ-pVPXjJzCuQyJB0HbNUr0RWIQQDt_cfL");'></div>
+<div>
+<p class="text-white text-lg font-semibold leading-normal">Margherita Pizza</p>
+<p class="text-[var(--secondary-text-color)] text-sm font-normal leading-normal mt-1">Simple yet delicious pizza with tomatoes, mozzarella, and basil.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl min-w-64 bg-[var(--container-background)] p-4 shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQl-vGb_T_AFMSGXhIXeMK7U2fY62It7mYpGagyHiG0aqoX7btcUwWsxJzJI4FZ3--OZgWid5B8mQiD6wnnI_IAhtgX-6bFw1mlmP3D92qLpY2ALD5yzNWAFhmdYKPAp7Kirh5-DDWsuyPn5hTckTg1US-QLH7ObrHu2h7q1ePu2OWYcyMcQnw_aeVxb5gpYO4V2TYat8IhkLbu_nYMaZbtT1xkyiP1lVuf74kIe5HVDpSfvUQcUYtldAIyKFFZP0BiO4inKqw43yI");'></div>
+<div>
+<p class="text-white text-lg font-semibold leading-normal">Classic Tiramisu</p>
+<p class="text-[var(--secondary-text-color)] text-sm font-normal leading-normal mt-1">Coffee-flavored dessert with mascarpone cheese and cocoa.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl min-w-64 bg-[var(--container-background)] p-4 shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4gaxtqeDUWsPImLDS95nkbqGjUEiaBbU7usPQ-ZFEGuByTH8blTrpBjQBp4zjIEfgjtl0yTwUdnAvWxFniv4M3VRE1_XApS2b-_tI5a-_lzlbV3XqjMHiklVo9kY-x9JYTnpRzhfXtn3xTbpYEb1HrF-Gx5x92yIX6Vci1fc-RUjtjhwP1lKcmRm4emERmynGEU4wS6HNItx4FEupMzwvemuQS-0WrgMrI1vafAKujdm71WB5uYdChtnGEGYmHVq6Pt6r8K91f7TK");'></div>
+<div>
+<p class="text-white text-lg font-semibold leading-normal">Seafood Risotto</p>
+<p class="text-[var(--secondary-text-color)] text-sm font-normal leading-normal mt-1">Creamy risotto with a variety of fresh seafood.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-12">
+<h3 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Cook With Me Live</h3>
+<div class="flex flex-col lg:flex-row items-start justify-center gap-8 p-4 bg-[var(--container-background)] rounded-xl shadow-xl">
+<div class="flex flex-col min-w-72 max-w-sm flex-1 gap-2 p-4 bg-[#2a1517] rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<button class="text-white hover:text-[var(--primary-color)] p-2 rounded-full transition-colors">
+<div data-icon="CaretLeft" data-size="20px" data-weight="bold">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z"></path></svg>
+</div>
+</button>
+<p class="text-white text-lg font-bold leading-tight text-center">July 2024</p>
+<button class="text-white hover:text-[var(--primary-color)] p-2 rounded-full transition-colors invisible"> 
+<div data-icon="CaretRight" data-size="20px" data-weight="bold">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z"></path></svg>
+</div>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">S</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">M</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">T</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">W</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">T</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">F</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">S</p>
+<button class="h-10 w-full text-white/70 hover:bg-[var(--border-color)] rounded-full transition-colors text-sm col-start-4">1</button>
+<button class="h-10 w-full text-white/70 hover:bg-[var(--border-color)] rounded-full transition-colors text-sm">2</button>
+<button class="h-10 w-full text-white/70 hover:bg-[var(--border-color)] rounded-full transition-colors text-sm">3</button>
+<button class="h-10 w-full text-white/70 hover:bg-[var(--border-color)] rounded-full transition-colors text-sm">4</button>
+<button class="h-10 w-full text-white bg-[var(--primary-color)] rounded-full transition-colors text-sm font-semibold">5</button>
+<button class="h-10 w-full text-white/70 hover:bg-[var(--border-color)] rounded-full transition-colors text-sm">6</button>
+<script>
+                      for(let i=7; i<=30; i++) {
+                        document.write(`<button class="h-10 w-full text-white/70 hover:bg-[var(--border-color)] rounded-full transition-colors text-sm">${i}</button>`)
+                      }
+                    </script>
+</div>
+</div>
+<div class="flex flex-col min-w-72 max-w-sm flex-1 gap-2 p-4 bg-[#2a1517] rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<button class="text-white hover:text-[var(--primary-color)] p-2 rounded-full transition-colors invisible"> 
+<div data-icon="CaretLeft" data-size="20px" data-weight="bold">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z"></path></svg>
+</div>
+</button>
+<p class="text-white text-lg font-bold leading-tight text-center">August 2024</p>
+<button class="text-white hover:text-[var(--primary-color)] p-2 rounded-full transition-colors">
+<div data-icon="CaretRight" data-size="20px" data-weight="bold">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z"></path></svg>
+</div>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">S</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">M</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">T</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">W</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">T</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">F</p>
+<p class="text-[var(--secondary-text-color)] text-xs font-bold h-10 flex items-center justify-center">S</p>
+<button class="h-10 w-full text-white/70 hover:bg-[var(--border-color)] rounded-full transition-colors text-sm col-start-5">1</button> 
+<button class="h-10 w-full text-white/70 hover:bg-[var(--border-color)] rounded-full transition-colors text-sm">2</button>
+<button class="h-10 w-full text-white/70 hover:bg-[var(--border-color)] rounded-full transition-colors text-sm">3</button>
+<script>
+                      for(let i=4; i<=31; i++) {
+                        let specialClass = i === 15 ? 'bg-[var(--primary-color)] font-semibold' : 'hover:bg-[var(--border-color)] text-white/70';
+                        document.write(`<button class="h-10 w-full text-white ${specialClass} rounded-full transition-colors text-sm">${i}</button>`)
+                      }
+                    </script>
+</div>
+</div>
+<div class="flex-1 max-w-lg p-4">
+<p class="text-white text-lg font-medium leading-relaxed mb-4">
+                    Join Chef Isabella Rossi for a live cooking session on <strong class="text-[var(--primary-color)]">August 15th at 6 PM CEST</strong>. Learn to prepare her signature dish, Pasta Carbonara, and ask questions in real-time.
+                  </p>
+<p class="text-[var(--secondary-text-color)] text-base mb-6">
+                    Don't miss this exclusive opportunity to cook alongside a master chef from the comfort of your kitchen. Get ready for an unforgettable culinary experience!
+                  </p>
+<button class="flex min-w-[150px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[var(--primary-color)] hover:bg-[#c81e26] text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors shadow-md">
+<span class="truncate">Join Livestream</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="border-t border-solid border-t-[var(--border-color)] px-10 py-8 text-center">
+<p class="text-[var(--secondary-text-color)] text-sm">© 2024 TasteTreks. All Rights Reserved.</p>
+<div class="flex justify-center gap-4 mt-4">
+<a class="text-[var(--secondary-text-color)] hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-[var(--secondary-text-color)] hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-[var(--secondary-text-color)] hover:text-white transition-colors" href="#">Contact Us</a>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>
